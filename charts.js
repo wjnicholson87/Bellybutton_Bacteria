@@ -124,7 +124,7 @@ function buildCharts(sample) {
       mode: "gauge+number",
       gauge: {
         bar: {color: 'black'},
-        axis: { range: [null, 10] },
+        axis: { range: [null, 9] },
         steps: [
         { range: [0, 2], color: 'rgb(255,0,0)' },
         { range: [2, 4], color: 'rgb(227, 158, 71)' },
@@ -134,8 +134,7 @@ function buildCharts(sample) {
         ]
       }
     }
-    ];
-    
+    ];  
     //Create the layout for the gauge chart.
     var gaugeLayout = { width: 400, height: 250, margin: { t: 0, b: 0} };
 
