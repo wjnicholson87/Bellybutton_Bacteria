@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,24 +17,20 @@
       <div class="col-md-12 jumbotron text-center", style = "background-image: url(https://cdn.britannica.com/00/2100-004-5F7D7F43/Orange-star-lichen.jpg?s=1500x700&q=85);">
         <style> 
           @font-face { font-family: SHRIMP; font-weight: bold; src: url('SHRIMP.ttf');} 
-          h1, p, h5, h3 {
-             font-family: SHRIMP
-          }
         </style>
-        <h1 style="color:rgb(11, 3, 3)">Belly Button Biodiversity Dashboard</h1>
-        <p style="color:rgb(11, 3, 3)">Use the interactive charts below to explore the dataset</p>
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
     <div class="row">
-      <div style="background-color: #3f2424"></div>
       <div class="col-md-2">
         <div class="well">
-          <h5 style="color:rgb(11, 3, 3)">Test Subject ID No.:</h5>
+          <h5>Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 style="color:rgb(11, 3, 3)" class="panel-title">Demographic Info</h3>
+            <h3 class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
