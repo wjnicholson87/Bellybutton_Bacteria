@@ -10,10 +10,18 @@
 </head>
 
 <body>
-
+<!--body { color: #220f0f; }-->
+<body style="background-color: #220f0f"></body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
+      <div class="col-md-12 jumbotron text-center", style = "background-image: url(https://cdn.britannica.com/00/2100-004-5F7D7F43/Orange-star-lichen.jpg?s=1500x700&q=85);">
+        <style>
+          @font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); } 
+          @font-face { font-family: Delicious; font-weight: bold; src: url('Delicious-Bold.otf');} 
+          h1 {
+             font-family: Delicious
+          }
+        </style>
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
@@ -22,7 +30,6 @@
       <div class="col-md-2">
         <div class="well">
           <h5>Test Subject ID No.:</h5>
-          <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
