@@ -65,7 +65,7 @@ function buildCharts(sample) {
     var meta = array[0];
     var freq = meta.wfreq
     //  5. Create a variable that holds the first sample in the array.
-    var firstSample = filteredSamples[0];
+    var firstSample = filterSamples[0];
     
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var ids = firstSample.otu_ids;
