@@ -109,7 +109,9 @@ function buildCharts(sample) {
 
     //Create the layout for the bubble chart.
     var bubbleLayout = {
-      xaxis: { title: "OTU ID" },
+      title: "Belly Button Samples",
+      xaxis: { title: "OTU IDs" },
+      yaxis: { title: "Sample Values" },
       margin: { t: 0 },
       hovermode: "closest",
       };
