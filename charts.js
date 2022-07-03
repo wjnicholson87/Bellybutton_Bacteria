@@ -57,12 +57,6 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
-    // Attempt to format all plotly backgrounds
-    var formatPlot = {
-      plot_bgcolor: rgb(165, 121, 78),
-      paper_bgcolor: rgba(255, 255, 255, 0.2)
-}
-
     // 3. Create a variable that holds the samples array. 
     var samplesArray = data.samples;
     // 4. Create a variable that filters the samples for the object with the desired sample number.
@@ -97,7 +91,7 @@ function buildCharts(sample) {
       margin: { t: 30, l: 150 }
     };
     // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar", barData, barLayout, formatPlot);
+    Plotly.newPlot("bar", barData, barLayout);
  
     // Deliverable 2: Create the Bubble Chart
     var bubbleData = [
@@ -119,27 +113,24 @@ function buildCharts(sample) {
       margin: { t: 0 },
       hovermode: "closest",
       };
-    Plotly.newPlot("bubble", bubbleData, bubbleLayout, formatPlot);
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
     // Deliverable 3: Build Gauge
     var gaugeData = [ {
       domain: { x: [0, 1], y: [0, 1] },
       value: freq,
-      title: {text: "<br>Belly Button Washing Frequency</br> <br>Scrubs Per Week"},
+      title: { text: "Belly Button Washing Frequency (Scrubs per Week)" },
       type: "indicator",
       mode: "gauge+number",
       gauge: {
-        axis: { range: [null, 9] },
+        bar: {color: 'black'},
+        axis: { range: [null, 10] },
         steps: [
-          { range: [0, 1], color: 'rgb(248, 243, 236)' },
-          { range: [1, 2], color: 'rgb(245, 242, 220)' },
-          { range: [2, 3], color: 'rgb(235, 230, 202)' },
-          { range: [3, 4], color: 'rgb(228, 232, 180)' },
-          { range: [4, 5], color: 'rgb(215, 230, 170)' },
-          { range: [5, 6], color: 'rgb(190, 220, 150)' },
-          { range: [6, 7], color: 'rgb(150, 170, 145)' },
-          { range: [7, 8], color: 'rgb(128, 162, 142)' },
-          { range: [8, 9], color: 'rgb(133, 174, 141)' },
+        { range: [0, 2], color: 'rgb(255,0,0)' },
+        { range: [2, 4], color: 'rgb(227, 158, 71)' },
+        { range: [4, 6], color: 'rgb(248, 252, 28)' },
+        { range: [6, 8], color: 'rgb(151, 242, 76)' },
+        { range: [8, 10], color: 'rgb(57, 120, 3)' },
         ]
       }
     }
@@ -149,6 +140,6 @@ function buildCharts(sample) {
     var gaugeLayout = { width: 400, height: 250, margin: { t: 0, b: 0} };
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot("gauge", gaugeData, gaugeLayout, formatPlot);
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
   });
 };
