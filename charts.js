@@ -57,6 +57,12 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
+    // Attempt to format all plotly backgrounds
+    var formatPlot = {
+      plot_bgcolor: rgb(165, 121, 78),
+      paper_bgcolor: rgba(255, 255, 255, 0.2)
+}
+
     // 3. Create a variable that holds the samples array. 
     var samplesArray = data.samples;
     // 4. Create a variable that filters the samples for the object with the desired sample number.
@@ -91,7 +97,7 @@ function buildCharts(sample) {
       margin: { t: 30, l: 150 }
     };
     // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot("bar", barData, barLayout);
+    Plotly.newPlot("bar", barData, barLayout, formatPlot);
  
     // Deliverable 2: Create the Bubble Chart
     var bubbleData = [
@@ -113,7 +119,7 @@ function buildCharts(sample) {
       margin: { t: 0 },
       hovermode: "closest",
       };
-    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout, formatPlot);
 
     // Deliverable 3: Build Gauge
     var gaugeData = [ {
@@ -143,6 +149,6 @@ function buildCharts(sample) {
     var gaugeLayout = { width: 400, height: 250, margin: { t: 0, b: 0} };
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout, formatPlot);
   });
 };
