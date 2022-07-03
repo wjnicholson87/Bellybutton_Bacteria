@@ -1,29 +1,29 @@
 .jumbotron > h1 {
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
     color:rgb(11, 3, 3); 
     font-family: SHRIMP;
 }
 h1 {
-    background-color: #3f2424;
+
     color:rgb(11, 3, 3); 
     font-family: SHRIMP
  }
 h3 {
-    background-color: #3f2424;
+
     color:rgb(11, 3, 3); 
     font-family: SHRIMP
  }
 p {
-    background-color: #3f2424;
+
     color:rgb(11, 3, 3); 
     font-family: SHRIMP
  }
 h5 {
-    background-color: #3f2424;
+
     color:rgb(11, 3, 3); 
     font-family: SHRIMP
  }
  div {
-    background-color: #3f2424;
+ 
     font-family: SHRIMP
  }
