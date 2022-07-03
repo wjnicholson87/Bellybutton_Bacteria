@@ -10,31 +10,29 @@
 </head>
 
 <body>
-<body style="background-color: #220f0f"></body>
-<style>
-  @font-face { font-family: Delicious; src: url('Delicious-Roman.otf'); } 
-  @font-face { font-family: Delicious; font-weight: bold; src: url('Delicious-Bold.otf');} 
-  body {
-     font-family: Delicious
-  }
-</style>
+<body style="background-color: #3f2424"></body>
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center", style = "background-image: url(https://cdn.britannica.com/00/2100-004-5F7D7F43/Orange-star-lichen.jpg?s=1500x700&q=85);">
-        
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <style> 
+          @font-face { font-family: Delicious; font-weight: bold; src: url('Delicious-Bold.otf');} 
+          h1 {
+             font-family: Delicious
+          }
+        </style>
+        <h1 style="color:rgb(11, 3, 3)">Belly Button Biodiversity Dashboard</h1>
+        <p style="color:rgb(11, 3, 3)">Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" style="background-color: #3f2424">
       <div class="col-md-2">
         <div class="well">
-          <h5>Test Subject ID No.:</h5>
+          <h5 style="color:rgb(11, 3, 3)">Test Subject ID No.:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+            <h3 style="color:rgb(11, 3, 3)" class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
