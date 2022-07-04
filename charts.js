@@ -111,7 +111,7 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: "Belly Button Samples",
       xaxis: { title: "OTU IDs" },
-      margin: { t: 0 },
+      margin: { t: 25 },
       hovermode: "closest",
       };
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
@@ -120,7 +120,7 @@ function buildCharts(sample) {
     var gaugeData = [ {
       domain: { x: [0, 1], y: [0, 1] },
       value: freq,
-      title: { text: "Belly Button Washing Frequency <br> (Scrubs per Week)", font: { size: 24 } },
+      title: { text: "Belly Button Washing Frequency <br> (Scrubs per Week)", font: { size: 12 } },
       type: "indicator",
       mode: "gauge+number",
       gauge: {
