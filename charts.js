@@ -111,7 +111,7 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: "Belly Button Samples",
       xaxis: { title: "OTU IDs" },
-      margin: { t: 25 },
+      margin: { t: 35 },
       hovermode: "closest",
       };
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
@@ -120,7 +120,7 @@ function buildCharts(sample) {
     var gaugeData = [ {
       domain: { x: [0, 1], y: [0, 1] },
       value: freq,
-      title: { text: "Belly Button Washing Frequency <br> (Scrubs per Week)", font: { size: 12 } },
+      title: { text: <><b>"Belly Button Washing Frequency"</b><br>"(Scrubs per Week)"</br></>, font: { size: 15 } },
       type: "indicator",
       mode: "gauge+number",
       gauge: {
@@ -137,7 +137,7 @@ function buildCharts(sample) {
     }
     ];  
     //Create the layout for the gauge chart.
-    var gaugeLayout = { width: 400, height: 250, margin: { t: 0, b: 0} };
+    var gaugeLayout = { width: 400, height: 250, margin: { t: 20, b: 0} };
 
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot("gauge", gaugeData, gaugeLayout);
