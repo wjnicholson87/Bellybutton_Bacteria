@@ -111,7 +111,6 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: "Belly Button Samples",
       xaxis: { title: "OTU IDs" },
-      yaxis: { title: "Sample Values" },
       margin: { t: 0 },
       hovermode: "closest",
       };
@@ -121,7 +120,7 @@ function buildCharts(sample) {
     var gaugeData = [ {
       domain: { x: [0, 1], y: [0, 1] },
       value: freq,
-      title: { text: "Belly Button Washing Frequency (Scrubs per Week)" },
+      title: { text: "Belly Button Washing Frequency <br> (Scrubs per Week)", font: { size: 24 } },
       type: "indicator",
       mode: "gauge+number",
       gauge: {
